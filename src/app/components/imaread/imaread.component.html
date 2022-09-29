@@ -1,0 +1,17 @@
+<div *ngIf="!isLoaded" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+<div class="project-holder desktop" [class.isLoad]="isLoaded">
+  <div class="iframe-holder" >
+    <iframe (load)="loadCallBack()" class="desktop"  width="100%" height="896" src="https://xd.adobe.com/embed/c3cb0ba5-9400-4fa9-b09d-9e1fd71f720d-9698/?fullscreen" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="project-holder mobile" [class.isLoad]="isLoaded">
+  <iframe (load)="loadCallBack()" width="100%" height="896" src="https://xd.adobe.com/embed/5bf1b837-f6f3-4242-847d-bf1e28b6b803-0ea2/?fullscreen" frameborder="0" allowfullscreen></iframe>
+</div>
+<app-see-more
+  link2="/project/ethic"
+  link="/project/daisy"
+  text2="How can companies grow their business by acquiring certain certifications?"
+  text="How can we save our environment and make better shopping choices?"
+  img="dd.jpg"
+  img2="ei.jpg"></app-see-more>

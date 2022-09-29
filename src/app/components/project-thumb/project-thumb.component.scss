@@ -1,0 +1,80 @@
+@import "../../../styles/breakpoints";
+.project-thumb{
+  &.last{
+    .button{
+      margin-bottom: 111px;
+    }
+  }
+  img{
+    cursor: pointer;
+    max-width: 100%;
+  }
+  .desc{
+    cursor: pointer;
+    margin-top: 25px;
+    font-size: 24px;
+    font-weight: 900;
+    font-style: italic;
+    color: #2E2E2E;
+  }
+  h3{
+    cursor: pointer;
+    margin: 0;
+  }
+  .button{
+    cursor: pointer;
+    margin-top: 23px;
+    margin-bottom: 75px;
+    span{
+      font-size: 12px;
+      text-decoration: underline;
+    }
+  }
+}
+@include lg {
+  .project-thumb {
+    display: flex;
+    max-width: 1024px;
+    margin-bottom: 106px;
+    &.reverse{
+      flex-direction: row-reverse;
+      .des-button{
+        margin-left: 0;
+        margin-right: 103px;
+      }
+    }
+    .img-holder{
+      max-width: 595px;
+      max-height: 652px;
+      overflow: hidden;
+      img{
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+      }
+      &:hover{
+        img{
+          -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+        }
+      }
+
+    }
+    img{
+    }
+    .des-button{
+      margin-left: 103px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+
+      //border: 1px solid red;
+      .desc{
+        max-width: 382px;
+        font-size: 37px;
+      }
+    }
+  }
+}

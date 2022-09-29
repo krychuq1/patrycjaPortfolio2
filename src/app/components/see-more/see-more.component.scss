@@ -1,0 +1,53 @@
+@import "../../../styles/breakpoints";
+.see-more{
+  position: relative;
+  margin-top: 115px;
+  cursor: pointer;
+  p{
+    font-weight: 900;
+    font-size: 23px;
+    font-style: italic;
+  }
+  .see-more-project{
+    span{
+      text-decoration: underline;
+      font-size: 12px;
+    }
+    img{
+      width: 100%;
+    }
+    margin-bottom: 49px;
+  }
+}
+@include lg{
+  .see-more{
+    .see-more-project-holder{
+      display: flex;
+      .see-more-project{
+        .img-holder{
+          overflow: hidden;
+          max-height: 552px;
+        }
+        img{
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+        }
+        &:hover{
+          img{
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        }
+        width: 50%;
+        &:first-of-type{
+          margin-right: 8px;
+        }
+        &:last-of-type{
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+$screen-desktop: 1024px;
+$small-mobile: 374px;
+$medium-mobile: 375px;
+$large-mobile: 425px;
+$small-tablet: 768px;
+@mixin lg {
+  @media (min-width: #{$screen-desktop}) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (min-width: #{$small-mobile} ) {
+    @content;
+  }
+}
+@mixin mm {
+  @media (min-width: #{$medium-mobile}) {
+    @content;
+  }
+}
+@mixin lm {
+  @media (min-width: #{$large-mobile}) {
+    @content;
+  }
+}
+@mixin st {
+  @media (min-width: #{$small-tablet}) {
+    @content;
+  }
+}

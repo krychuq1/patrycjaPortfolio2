@@ -1,0 +1,18 @@
+<div *ngIf="!isLoaded" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+<div class="project-holder desktop" [class.isLoad]="isLoaded">
+  <div class="iframe-holder">
+    <iframe (load)="loadCallBack()" class="desktop"  width="100%" height="896" src="https://xd.adobe.com/embed/f5ee6598-03b8-40e2-b492-ee95976e1ee5-a0bd/?fullscreen" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+</div>
+<div class="project-holder mobile" [class.isLoad]="isLoaded">
+  <iframe (load)="loadCallBack()" width="100%" height="896" src="https://xd.adobe.com/embed/f1aff7d5-b53a-4e5d-941a-2bc0d4dbb413-a4fc/?fullscreen" frameborder="0" allowfullscreen></iframe>
+</div>
+<app-see-more
+  link="/project/givt"
+  link2="/project/givt2"
+  text="How to organise the process of receiving compensation for delayed flights?"
+  text2="How can back office application make managers work more efficient?"
+  img2="givt_pm.jpg"
+  img="givt_cm.jpg"></app-see-more>

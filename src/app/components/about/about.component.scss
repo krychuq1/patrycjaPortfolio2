@@ -1,0 +1,35 @@
+@import "../../../styles/breakpoints";
+.about-holder{
+  position: relative;
+  margin-top: 0px;
+  .inner{
+    max-width: 600px;
+    margin: 0 auto;
+    img{
+      max-width: 100%;
+    }
+  }
+  .desc{
+    padding: 20px;
+    width: calc(100% - 90px);
+    margin: 0 auto;
+    position: relative;
+    top: -80px;
+    background: white;
+    h3{
+      font-style: italic;
+      font-weight: 800;
+      font-size: 32px;
+    }
+    //border: 1px solid red;
+  }
+}
+@include lg {
+  .about-holder {
+    .desc{
+      padding: 40px;
+      width: calc(100% - 180px);
+    }
+
+  }
+}

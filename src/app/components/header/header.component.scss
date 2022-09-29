@@ -1,0 +1,140 @@
+@import "../../../styles/breakpoints";
+.header{
+  //position: relative;
+  background: white;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  //border: 1px solid red;
+  .inner{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0px 22px;
+  }
+
+  p{
+    cursor: pointer;
+    font-size: 24px;
+    font-family: 'Racing Sans One', cursive;
+    font-weight: 300;
+    &.logo{
+      color: #292929;
+    }
+  }
+  .hamburger{
+    padding: 0;
+    .hamburger-box{
+      width: 22px;
+    }
+  }
+  .hamburger-inner{
+    width: 15px;
+    margin-left: 8px;
+    height: 2px;
+    &:before{
+      height: 2px;
+      width: 22px;
+      top: -5px;
+      margin-left: 0px;
+    }
+    &:after{
+      margin-left: 0px;
+      height: 2px;
+      width: 22px;
+      top: -10px
+    }
+  }
+  .desktop-nav{
+    display: none;
+  }
+}
+.header-body{
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  padding-top: 68px;
+  height: calc(100vh - 146px);
+  overflow: hidden;
+  text-align: center;
+  background: white;
+  z-index: 1;
+  .menu{
+    opacity: 0;
+    transition: opacity 0.2s
+  }
+  //display: none;
+  &.active{
+    display: block;
+    z-index: 2;
+    .menu{
+      opacity: 1;
+      transition: opacity 0.2s
+    }
+  }
+  p{
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 0 50px 0;
+  }
+}
+@include lg {
+  .header-body{
+    display: none;
+  }
+  .header{
+    //height: 150px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    .inner{
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: white;
+      padding: 20px 22px 15px 22px;
+
+    }
+    .desktop-nav{
+      .nav-element {
+        display: inline-block;
+        position: relative;
+        color: #2E2E2E;
+      }
+
+      .nav-element:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #606060;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .nav-element:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      p{
+        font-weight: 300;
+        margin-right: 40px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+      display: flex;
+    }
+    img{
+      display: none;
+    }
+  }
+}
+

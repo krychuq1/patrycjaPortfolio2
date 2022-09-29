@@ -1,0 +1,24 @@
+<div *ngIf="!isLoaded" class="lds-ring"><div></div><div></div><div></div><div></div></div>
+
+<div class="project-holder daisy-holder desktop" [class.isLoad]="isLoaded">
+  <div class="iframe-holder"  >
+<!--    onload="test()" (load)="test()"-->
+    <iframe (load)="loadCallBack()"
+      sandbox="allow-same-origin allow-forms allow-scripts"
+      id="daisy"
+      class="desktop"  width="100%" height="896"
+            src="https://xd.adobe.com/embed/e906c0ca-8e19-46c0-ae97-c9b2195907db-bc55/?fullscreen" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div class="project-holder daisy-holder mobile" [class.isLoad]="isLoaded" >
+  <iframe (load)="loadCallBack()" width="100%" height="896" src="https://xd.adobe.com/embed/ac7a8528-0a8b-4502-84b9-d93ef46e09d0-f929/?fullscreen" frameborder="0" allowfullscreen></iframe>
+</div>
+<app-see-more
+  link="/project/ethic"
+  link2="/project/omnistrat"
+  text="How can companies grow their business by acquiring certain certifications?"
+  text2="How can you lead and manage your organisation globally?"
+  img2="omni.jpg"
+                 img="ei.jpg"></app-see-more>
+

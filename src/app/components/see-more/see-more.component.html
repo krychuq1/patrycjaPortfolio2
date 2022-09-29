@@ -1,0 +1,22 @@
+<div class="see-more" >
+  <p>See more projects</p>
+  <div class="see-more-project-holder">
+    <div class="see-more-project" [routerLink]="link">
+      <div class="img-holder">
+        <img src="assets/project-thumb/{{img}}">
+      </div>
+      <p>{{text}}</p>
+      <span>read more</span>
+    </div>
+    <div class="see-more-project" [routerLink]="link2">
+      <div class="img-holder">
+        <img src="assets/project-thumb/{{img2}}">
+      </div>
+      <p>{{text2}}</p>
+      <span>read more</span>
+    </div>
+  </div>
+  <app-footer></app-footer>
+
+</div>
+

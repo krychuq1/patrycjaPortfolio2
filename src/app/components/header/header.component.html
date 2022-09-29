@@ -1,0 +1,21 @@
+<div class="header">
+  <div class="inner">
+    <p [routerLink]="'./'" (click)="clear()" class="logo">Patrycja Musur</p>
+    <img src="assets/header/menu.svg" *ngIf="!active" (click)="toggleActive()">
+    <img src="assets/header/cancel.svg" *ngIf="active" (click)="toggleActive()">
+    <div class="desktop-nav">
+      <p routerLink="./"  class="nav-element">projects</p>
+      <p routerLink="/about" class="nav-element">about</p>
+      <p routerLink="contact" class="nav-element">contact</p>
+    </div>
+  </div>
+
+</div>
+<!---->
+<div class="header-body" [@enabledStateChange]="active ? 'active' : 'leave'" [class.active]="active">
+  <div class="menu">
+    <p routerLink="./" (click)="toggleActive()">projects</p>
+    <p routerLink="/about" (click)="toggleActive()">about</p>
+    <p routerLink="contact" (click)="toggleActive()">contact</p>
+  </div>
+</div>

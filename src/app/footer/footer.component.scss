@@ -1,0 +1,44 @@
+@import "../../styles/breakpoints";
+.footer{
+  //border: 1px solid red;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  &.project{
+    bottom: -80px;
+  }
+  //min-width: 100%;
+  p{
+    text-align: left;
+    font-weight: 300;
+    //padding-top: 67px;
+    margin-bottom: 26px;
+    font-size: 10px;
+    color: #AAAAAA;
+  }
+}
+@include lg{
+  .footer{
+    max-width: 1024px;
+    margin: 0 auto;
+    &.project{
+      //bottom: -297px;
+      p{
+        //padding-bottom: 129px;
+        //margin-bottom: 129px;
+      }
+
+
+    }
+  }
+}
+@media (min-width: #{1337px}) {
+  .footer {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    &.project {
+      bottom: -80px;
+    }
+  }
+}
